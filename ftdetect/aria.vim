@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.aria setf aria
+autocmd BufRead,BufNewFile *.aria set filetype=aria
