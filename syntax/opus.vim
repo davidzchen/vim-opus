@@ -5,10 +5,10 @@ syn match Number "\<\d*\([Ee][+-]\?\d\+\)\?\([KMGTP]\|Ki\|Mi\|Gi\|Ti\|Pi\)\?\>"
 syn match Number "\<\d\+[.]\d*\([Ee][+-]\?\d\+\)\?\>"
 syn match Number "\<[.]\d\+\([Ee][+-]\?\d\+\)\?\>"
 
-syn match c4Escape display contained /\\\([btnfr\\'"]\|x\x\{2}\)/
-syn match c4EsacpeUnicode display contained /\\\(u\x\{4}\|U\x\{8}\)/
-syn match c4EscapeUnicode display contained /\\u{\x\{1,6}}/
-syn region String start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=c4Escape,c4EscapeUnicode
+syn match OpusEscape display contained /\\\([btnfr\\'"]\|x\x\{2}\)/
+syn match OpusEsacpeUnicode display contained /\\\(u\x\{4}\|U\x\{8}\)/
+syn match OpusEscapeUnicode display contained /\\u{\x\{1,6}}/
+syn region String start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=OpusEscape,OpusEscapeUnicode
 
 syn region Comment start="/[*]" end="[*]/"
 syn match Comment "//.*$"
